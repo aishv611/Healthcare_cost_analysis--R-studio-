@@ -103,7 +103,8 @@ summary(as.factor(Hospital_costs$RACE))
 Hospital_costs <- na.omit(Hospital_costs)
 summary(as.factor(Hospital_costs$RACE))
 ```
-* As it can be seen, 484 patients out of 499 fall under group 1, showing that the number of observations in group 1 is way higher than that of others - hence the data is skewed. This will only affect the results from linear regression or ANOVA analysis.
+* As it can be seen, 484 patients out of 499 fall under group 1, showing that the number of observations in group 1 is way higher than that of others 
+* Hence the data is skewed. This will only affect the results from linear regression or ANOVA analysis.
 ```{r}
 raceInfluenceAOV <- aov(TOTCHG ~ RACE, data = Hospital_costs)
 raceInfluenceAOV
