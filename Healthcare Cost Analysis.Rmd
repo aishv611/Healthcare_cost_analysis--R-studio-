@@ -132,7 +132,7 @@ summary(Hospital_costs$FEMALE)
 ageGenderInflModel <- lm(TOTCHG ~ AGE+FEMALE, data=Hospital_costs)
 summary(ageGenderInflModel)
 ```
-* Since the p-values of AGE is much lesser than 0.05 and also lesser than 0.001, the ideal statistical significance level(***), it means AGE is the most statistically sugnificant.
+* Since the p-values of AGE is much lesser than 0.05 and also lesser than 0.001, the ideal statistical significance level, it means AGE is the most statistically significant.
 * Similarly , gender is also less than 0.05.
 * Hence we can conclude that the model is statistically significant.
 
@@ -205,7 +205,7 @@ ModelTable
 ## ANALYSIS CONCLUSIONS
 
 * As it is evident in multiple models drawn above, health care costs is dependent on age, length of stay and type.
-   - Health care cost is highest for patients between 0-1 year.
+   * Health care cost is highest for patients between 0-1 year.
 * Maximum expenditure for 0-1 year is **678118** 
 * Length of Stay increases the stay charge.
 * All Patients Refined Diagnosis Related Groups also affects Health care costs.
