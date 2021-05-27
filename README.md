@@ -1,2 +1,2 @@
-# Simplilearn-IBM-PGP
-The repository consists of various projects I have done as a part of PGP-Simplilearn IBM program.
+# Healthcare Cost Analysis of Wisconsin Hospital
+Analysis of records of the nationwide survey of hospital costs conducted by the US Agency for Healthcare consisting of hospital records of inpatient samples. The data given was restricted to the city of **Wisconsin** and relates to patients in the age group **0-17 years**. The agency wanted to analyze the data to research on the healthcare costs and their utilization.
