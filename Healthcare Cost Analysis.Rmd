@@ -72,12 +72,12 @@ In order of severity of the diagnosis and treatments and to find out the expensi
 summary(as.factor(Hospital_costs$APRDRG))
 ```
 
-Get the diagnosis-related group and its hospitalization expenditure
+### Get the diagnosis-related group and its hospitalization expenditure
 ```{r}
 DiagnosisCost <- aggregate(TOTCHG ~ APRDRG, FUN = sum, data = Hospital_costs)
 ```
 
-Get the maximum diagnostic cost
+### Get the maximum diagnostic cost
 ```{r}
 DiagnosisCost[which.max(DiagnosisCost$TOTCHG),]
 ```
@@ -152,6 +152,7 @@ summary(ageGenderRaceInflModel)
 
 ### 6. Complete Analysis
 The agency wants to find the variable that mainly affects hospital costs.
+
 **Significance method** - build a model using all independent variables vs dependent variable
 ```{r}
 HospitalcostModel <- lm(TOTCHG ~ ., data=Hospital_costs)
@@ -177,7 +178,7 @@ summary(hospcostM3)
 ```
 
 ### Comparing Models
-* Creating the required columns:
+#Creating the required columns:
 ```{r}
 Data <- rep("HospitalCosts",4)
 Approach <- rep("Ap1:significance",4)
@@ -191,7 +192,7 @@ R2_sub_adjR2 <- c(0.005,0.004,0.003,0.003)
 pvalue <- rep("<2e-16", 4)
 ```
 
-* Structuring the columns of the Dataframe/ Table:
+#Structuring the columns of the Dataframe/ Table:
 ```{r}
 ModelTable <- data.frame(Data, Approach, Model_Name, Detail, R2, adj_R2, std_err, R2_sub_adjR2, pvalue)
 names(ModelTable)[c(3,6,7,8)] <- c("Model Name","adj R2","std error", "R2 - adj R2") 
