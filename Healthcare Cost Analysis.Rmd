@@ -76,6 +76,10 @@ summary(as.factor(Hospital_costs$APRDRG))
 ```{r}
 DiagnosisCost <- aggregate(TOTCHG ~ APRDRG, FUN = sum, data = Hospital_costs)
 ```
+```{r}
+#Histogram depicting the categories with Diagnosis cost
+hist(Hospital_costs$APRDRG,col = "red",main = "Frequency of Treatments",xlab = "Treatment Categories")
+```
 
 ### Get the maximum diagnostic cost
 ```{r}
